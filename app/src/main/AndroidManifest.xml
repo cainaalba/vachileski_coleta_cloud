@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="pneus.vachileski_mobi_apanhe_pneus">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="false"
+        android:configChanges="orientation|keyboard|touchscreen"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logocoleta"
+        android:label="@string/nome_aplicativo"
+        android:largeHeap="true"
+        android:noHistory="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logocoleta_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="q"
+        android:testOnly="false">
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait"
+            android:label="Vachileski Pneus"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ColetaBusca"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fotografar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Assinatura"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ColetaBorracheiro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ColetaConclusao"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ColetaTermosAceite"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ColetaPagamento"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ColetaItens"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout" />
+        <activity
+            android:name=".ColetaCliente"
+            android:screenOrientation="portrait"
+            android:label="Dados do Cliente"/>
+        <activity
+            android:name=".Home"
+            android:label="Vachileski Coleta"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="pneus.vachileski_mobi_funcoes_genericas.ImprimeColeta" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:exported="false"
+            android:name="com.novoda.merlin.MerlinService" />
+    </application>
+</manifest>

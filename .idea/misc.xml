@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_coleta_cliente.xml" value="0.21875" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/dialog_diretorios_atualizacao.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/dialog_opcoes_busca_coleta.xml" value="0.21467391304347827" />
+        <entry key="app/src/main/res/layout/view_configuracoes.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/view_visual_itens_coleta.xml" value="0.45" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

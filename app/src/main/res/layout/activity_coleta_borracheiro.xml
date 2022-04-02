@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_paginas"
+    android:padding="5dp"
+    tools:context=".ColetaBorracheiro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Coleta"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rdGroupTipoColeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <RadioButton
+                    android:id="@+id/rbReclamacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reclamação (Vulcanizações, Recapagens e Pneus da Casa)"
+                    android:textColor="@color/red"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rbRecapagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Serviços (Vulcanizações e Recapagens)"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rbServPatio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Serviços de Pátio"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rbProduto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Produto"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rbPnNovo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pneu Novo"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rbPnCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pneus da Casa"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rbCarcacas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carcaças"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rbOutros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Outros"
+                    android:textSize="13sp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/cmpDescrTipoColeta"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/bordas_campos"
+                android:hint="Descrição do Tipo de Coleta"
+                android:inputType="textCapCharacters"
+                android:padding="5dp"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:scrollHorizontally="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="3dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:id="@+id/llOrcamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Orçamento?"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdGroupOrcamento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbComOrcamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Com Orçamento"
+                        android:textColor="@color/blue"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSemOrcamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:text="Sem Orçamento"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:checked="true"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_margin="5dp"
+                    android:background="?android:attr/listDivider" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Informações Adicionais"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cmpInfoAdic"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bordas_campos"
+                android:hint="(Info. Geral da Coleta/Nota Fiscal)"
+                android:inputType="textCapCharacters|textFilter"
+                android:digits="@string/caracteresPermitidos"
+                android:maxLength="100"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textSize="13sp"
+                android:scrollHorizontally="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="5dp"
+                android:background="?android:attr/listDivider" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/chkBorracheiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borracheiro?"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llDadosBorracheiro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dados do Borracheiro"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:text="CPF/CNPJ:"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/cmpDocBorr"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/bordas_campos"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:gravity="center"
+                    android:text="Nome do\nBorracheiro:"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/cmpNomeBorr"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/bordas_campos"
+                    android:inputType="textCapCharacters"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    android:scrollHorizontally="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkComissBorr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:text="Comissão"
+                    android:textColor="@color/green"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnLimpaDadosBorracheiro"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/delete2" />
+
+                    <Button
+                        android:id="@+id/btnBuscaBorrach"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/search" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAssinaturaBorracheiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_margin="5dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Assinatura do Borracheiro"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgAssBorr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter" />
+
+                    <Button
+                        android:id="@+id/btnAssinar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/signature" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/formBotoesFimColeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnVoltar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/back" />
+
+            <Button
+                android:id="@+id/btnAvancar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/next" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/delete" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewSnackBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

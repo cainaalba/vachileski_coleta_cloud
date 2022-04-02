@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_paginas"
+    tools:ignore="SmallSp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        tools:context=".ColetaItens">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item: "
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <EditText
+                    android:id="@+id/txtItem"
+                    android:layout_width="42dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/bordas_campos"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="#E65100"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qtde: "
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <EditText
+                    android:id="@+id/cmpQtdCol"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/bordas_campos"
+                    android:ems="10"
+                    android:hint="Qtd"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <Button
+                    android:id="@+id/btnCancelCopia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/yellow"
+                    android:text="Cancelar\nCópia"
+                    android:textSize="11sp"
+                    app:autoSizeTextType="uniform" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cmpBitCol"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordas_campos"
+                    android:hint="Bitola | Descrição"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:padding="5dp"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    app:autoSizeTextType="uniform" />
+
+                <Button
+                    android:id="@+id/btnBuscaProduto"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/search"
+                    app:autoSizeTextType="uniform" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/cmpMarcaCol"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordas_coleta"
+                    android:hint="Marca"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="65dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:paddingStart="5dp"-->
+                <!--                        android:textColorHint="#E65100">-->
+
+                <EditText
+                    android:id="@+id/cmpModCol"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordas_coleta"
+                    android:hint="Modelo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="65dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:paddingStart="5dp"-->
+                <!--                        android:textColorHint="#E65100">-->
+
+
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cmpSerCol"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordas_coleta"
+                    android:hint="Série"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/cmpDotCol"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordas_coleta"
+                    android:hint="DOT"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="65dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:paddingStart="5dp"-->
+                <!--                        android:textColorHint="#E65100">-->
+
+
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="65dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:paddingStart="5dp"-->
+                <!--                        android:textColorHint="#E65100">-->
+
+
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="65dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:paddingStart="5dp"-->
+                <!--                        android:textColorHint="#E65100">-->
+
+                <EditText
+                    android:id="@+id/cmpDesCol"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordas_coleta"
+                    android:hint="Desenho"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/cmpValUnit"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordas_coleta"
+                    android:hint="Valor/It R$"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    android:maxLength="12"/>
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/cmpObsItem"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="1dp"
+                android:background="@drawable/bordas_campos_obrigat"
+                android:hint="OBS Item (impresso nas fichas de produção)"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:maxLength="100"
+                android:padding="5dp"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/llCamposOst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@drawable/bordas_coleta"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkcAgua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="C/ Água"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <CheckBox
+                    android:id="@+id/chkcCamara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="C/ Câmara"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <CheckBox
+                    android:id="@+id/chkGarantia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="Garantia"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOpcoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:background="@drawable/bordas_coleta"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkUrgente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:text="Urgente"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:layout_height="65dp"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:paddingStart="10dp"-->
+                <!--                        android:textColorHint="#E65100">-->
+
+                <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+                <ToggleButton
+                    android:id="@+id/toggleButtonMontado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="3dp"
+                    android:checked="false"
+                    android:textOff="Não Montado"
+                    android:textOn="Montado"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/llEdit"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal">-->
+
+                <!--                    <Button-->
+                <!--                        android:id="@+id/btnConfEdit"-->
+                <!--                        android:layout_width="30dp"-->
+                <!--                        android:layout_height="30dp"-->
+                <!--                        android:layout_margin="10dp"-->
+                <!--                        android:background="@drawable/save" />-->
+
+                <!--                    <Button-->
+                <!--                        android:id="@+id/btnCancelEdit"-->
+                <!--                        android:layout_width="30dp"-->
+                <!--                        android:layout_height="30dp"-->
+                <!--                        android:layout_margin="10dp"-->
+                <!--                        android:background="@drawable/delete" />-->
+                <!--                </LinearLayout>-->
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnTrocatTipoPnCasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/green"
+                android:text="Trocar\nTipo Pneu"
+                android:textSize="10sp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+        <!--        </HorizontalScrollView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btdAddIt"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/plus" />
+
+            <LinearLayout
+                android:id="@+id/llEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_margin="5dp">
+
+                <Button
+                    android:id="@+id/btnConfEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/save" />
+
+                <Button
+                    android:id="@+id/btnCancelEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/delete" />
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bordas_campos"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/wheel"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtQtdItens"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:textColor="#3CB369"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="20dp"
+                            android:background="?android:attr/listDivider"
+                            android:backgroundTint="@color/red" />
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="20dp"
+                            android:background="@drawable/cash"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtVlrTot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textColor="#3CB369"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+<!--            </LinearLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnAtualProdutos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Atualizar\nProdutos" />
+
+        <Button
+            android:id="@+id/btnVisualizaItens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Visualizar\nItens"
+            android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/btnImportarItens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="Importar\nItens Refat." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/formBotoesFimColeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnVoltar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/back" />
+
+            <Button
+                android:id="@+id/btnAvancar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/next" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/delete" />
+        </LinearLayout>
+
+<!--        <ScrollView-->
+<!--            android:id="@+id/scrolItens"-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/formItensColeta"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical" />-->
+<!--        </ScrollView>-->
+
+        <View
+            android:id="@+id/viewSnackBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

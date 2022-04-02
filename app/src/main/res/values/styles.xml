@@ -1,0 +1,12 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#E67817</item>
+        <item name="colorPrimaryDark">#E67817</item>
+        <item name="colorAccent">#027534</item>
+    </style>
+
+    <style name="ProgressBarLoad" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">#E67817</item>
+    </style>
+</resources>

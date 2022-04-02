@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Selecione a opção desejada"
+        android:textAlignment="center"
+        android:textColor="@color/preto" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardVisualizar"
+                android:layout_width="65dp"
+                android:layout_height="75dp"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/fundo_paginas"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/btnVisualColeta"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/view"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Visualizar"
+                        android:textColor="@color/preto"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEnviar"
+                android:layout_width="65dp"
+                android:layout_height="75dp"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/fundo_paginas"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/btnEnviar"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/coletasenviadas"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/txtEnviar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Enviar"
+                        android:textColor="@color/preto"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardExcluir"
+                android:layout_width="65dp"
+                android:layout_height="75dp"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/fundo_paginas"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/btnDeletar"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/delete2"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Excluir"
+                        android:textColor="@color/preto"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPDF"
+                android:layout_width="65dp"
+                android:layout_height="75dp"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/fundo_paginas"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/btnPdf"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/pdf"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Gerar PDF"
+                        android:textColor="@color/preto"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardWhatsapp"
+                android:layout_width="65dp"
+                android:layout_height="75dp"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fundo_paginas"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/btnEnviarWhats"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/whatsapp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="WhatsApp"
+                        android:textColor="@color/preto"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEmail"
+                android:layout_width="65dp"
+                android:layout_height="75dp"
+                android:layout_margin="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/fundo_paginas"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/btnEnviarEmail"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/email"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="E-mail"
+                        android:textColor="@color/preto"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardImprime"
+                android:layout_width="65dp"
+                android:layout_height="75dp"
+                android:layout_margin="3dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/fundo_paginas">
+
+                    <ImageView
+                        android:id="@+id/btnImprimir"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/ticket"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Imprimir Ticket"
+                        android:textAlignment="center"
+                        android:textColor="@color/preto"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

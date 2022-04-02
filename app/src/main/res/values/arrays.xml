@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_marcas">
+        <item>AELUS</item>
+        <item>APOLLOTIRE</item>
+        <item>ARMORSTEQ</item>
+        <item>ARTANY</item>
+        <item>BRGOODRICH</item>
+        <item>BRIDGESTONE</item>
+        <item>CONTINENTAL</item>
+        <item>DOBLESTAR</item>
+        <item>DUNLOP</item>
+        <item>DURALINNG</item>
+        <item>DURLER</item>
+        <item>FATE</item>
+        <item>FIRESTONE</item>
+        <item>FORMULA</item>
+        <item>GENERALTIRE</item>
+        <item>GITI</item>
+        <item>GOENMAX</item>
+        <item>GOODRIDE</item>
+        <item>GOODYEAR</item>
+        <item>HANKOOK</item>
+        <item>HISTAHILI</item>
+        <item>KUMHO</item>
+        <item>LINGLONGTIRE</item>
+        <item>LININDFORC</item>
+        <item>LONGMARTCH</item>
+        <item>MICHELIN</item>
+        <item>NANCEN</item>
+        <item>PIRELLI</item>
+        <item>PROSHINA</item>
+        <item>SAILUNTIRE</item>
+        <item>SCORPION</item>
+        <item>TITAN</item>
+        <item>TOR</item>
+        <item>VIPAL</item>
+        <item>WATTSKARG</item>
+        <item>WORK</item>
+    </string-array>
+
+    <string-array name="mensagens_faturamento">
+        <item>NA DÚVIDA NÃO RASPAR</item>
+        <item>AUTORIZADO SEM GARANTIA</item>
+        <item>AUTORIZADO SOMENTE COM GARANTIA</item>
+        <item>ORÇAMENTO LIBERADO</item>
+        <item>ORÇAMENTO NÃO LIBERADO</item>
+        <item>RECLAMAÇÃO</item>
+    </string-array>
+
+    <string-array name="estados">
+        <item>AC</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SE</item>
+        <item>SP</item>
+        <item>TO</item>
+    </string-array>
+
+    <string-array name="contato_admins">
+        <item>Cainã-5491755037</item>
+        <item>Diniz-5497149450</item>
+        <item>Wesley-5496225561</item>
+    </string-array>
+</resources>

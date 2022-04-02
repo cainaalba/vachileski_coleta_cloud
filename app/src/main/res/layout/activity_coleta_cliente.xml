@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_paginas"
+    android:padding="3dp"
+    tools:context=".ColetaCliente">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtData"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/calendar"
+                    app:autoSizeTextType="uniform" />
+
+                <EditText
+                    android:id="@+id/cmpDtIni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bordas_campos"
+                    android:inputType="date"
+                    android:padding="5dp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="15sp"
+                    app:autoSizeTextType="uniform" />
+
+                <Button
+                    android:id="@+id/btnAtualizaClientes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/blue_light"
+                    android:text="Atualizar\nClientes"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnLimparDados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:text="Limpar Dados"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Vendedor: "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/txtCodVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <TextView
+                android:id="@+id/txtNomeVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/filiais"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <Spinner
+                android:id="@+id/spnFilial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="7dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/cpf_cnpj"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <EditText
+                android:id="@+id/cmpDoc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="no"
+                android:background="@drawable/bordas_campos"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="20"
+                android:padding="5dp"
+                android:scrollHorizontally="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <Button
+                android:id="@+id/btnVisualizadDoc"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ocultar"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"
+            app:autoSizeTextType="uniform">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/razao_social"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cmpRzSocial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bordas_campos"
+                android:digits="@string/caracteresPermitidos"
+                android:inputType="textCapCharacters|textFilter"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnBuscaCli"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/inscr_estadual"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cmpIE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:background="@drawable/bordas_campos"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/cmpMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:background="@drawable/bordas_campos"
+                android:ellipsize="end"
+                android:hint="@string/e_mail"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="@string/dados_entrega"
+            android:textAlignment="center"
+            android:textColor="#ffa500"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/cmpEndEntrega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bordas_campos"
+                android:hint="@string/endereco_entrega"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:padding="5dp"
+                android:scrollHorizontally="true"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+
+            <EditText
+                android:id="@+id/cmpNumEntrega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/bordas_campos"
+                android:hint="Nº"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/cmpComplEntrega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/bordas_campos"
+            android:hint="Complemento Entrega"
+            android:imeOptions="actionNext"
+            android:inputType="textCapCharacters"
+            android:padding="5dp"
+            android:textAllCaps="true"
+            android:textSize="15sp"
+            app:autoSizeTextType="uniform" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/cmpBairroEnterga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="no"
+                android:background="@drawable/bordas_campos"
+                android:ems="10"
+                android:hint="@string/bairro"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:padding="5dp"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+
+            <AutoCompleteTextView
+                android:id="@+id/cmpMunEntrega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bordas_campos"
+                android:ems="10"
+                android:hint="@string/municpio_entrega"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:padding="5dp"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spnEstEntr"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:imeOptions="actionNext"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/cmpCepEntrega"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="no"
+                android:background="@drawable/bordas_coleta"
+                android:hint="@string/cep"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="8"
+                android:padding="5dp"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/cmpDDDEntrega"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="no"
+                android:background="@drawable/bordas_campos"
+                android:ems="5"
+                android:hint="DDD"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="5dp"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+
+            <EditText
+                android:id="@+id/cmpFoneEntrega"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="no"
+                android:background="@drawable/bordas_campos"
+                android:hint="Telefone"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="9"
+                android:padding="5dp"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:text="@string/dados_cobranca"
+                android:textAlignment="center"
+                android:textColor="#00a86b"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cmpEndCobr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="no"
+                    android:background="@drawable/bordas_campos"
+                    android:ems="10"
+                    android:hint="@string/endereco_cobranca"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:padding="5dp"
+                    android:scrollHorizontally="true"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    app:autoSizeTextType="uniform" />
+
+                <EditText
+                    android:id="@+id/cmpNumCobr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/bordas_campos"
+                    android:hint="Nº"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/cmpComplCobr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bordas_campos"
+                android:hint="Complemento Cobrança"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:padding="5dp"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cmpBairroCobr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="no"
+                    android:background="@drawable/bordas_campos"
+                    android:ems="10"
+                    android:hint="@string/bairro_cobr"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:padding="5dp"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    app:autoSizeTextType="uniform" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/cmpMunCobr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bordas_campos"
+                    android:ems="10"
+                    android:hint="Município Cobrança"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:padding="5dp"
+                    android:textAllCaps="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnEstCob"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/cmpCepCobr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="no"
+                    android:background="@drawable/bordas_coleta"
+                    android:hint="@string/cep_cobranca"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    app:autoSizeTextType="uniform" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cmpDDDCobr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="no"
+                    android:background="@drawable/bordas_campos"
+                    android:ems="5"
+                    android:hint="DDD"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    app:autoSizeTextType="uniform" />
+
+                <EditText
+                    android:id="@+id/cmpFoneCobr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints="no"
+                    android:background="@drawable/bordas_campos"
+                    android:hint="Telefone"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    app:autoSizeTextType="uniform" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRefComerc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:text="Referências Comerciais"
+                android:textAlignment="center"
+                android:textColor="#005aff"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <EditText
+                android:id="@+id/cmpRefComerciais"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autofillHints="no"
+                android:background="@drawable/bordas_campos"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:maxLength="150"
+                android:padding="5dp"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/formBotoesFimColeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnVoltar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/back"
+                app:autoSizeTextType="uniform" />
+
+            <Button
+                android:id="@+id/btnAvancar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/next"
+                app:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewSnackBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

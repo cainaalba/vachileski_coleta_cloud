@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundologin"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="123dp"
+        app:srcCompat="@drawable/logovachi"
+        app:autoSizeTextType="uniform"
+        android:contentDescription="@string/app_name"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coleta Eletrônica de Pneus"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        app:autoSizeTextType="uniform" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="0dp"
+        app:autoSizeTextType="uniform" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="3dp"
+                android:gravity="bottom">
+
+                <EditText
+                    android:id="@+id/cmpUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/campo"
+                    android:hint="@string/usuario"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    app:autoSizeTextType="uniform"
+                    android:autofillHints="no" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="3dp"
+                android:gravity="bottom">
+
+                <EditText
+                    android:id="@+id/cmpSenha"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/campo"
+                    android:hint="@string/senha"
+                    android:imeActionId="10"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:padding="5dp"
+                    android:autofillHints="@string/senha"
+                    app:autoSizeTextType="uniform" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnAcessar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btnlogin"
+                android:text="@string/entrar"
+                android:textStyle="bold"
+                android:textColor="@color/branco"
+                android:elevation="3dp"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/chkLembrarMe"
+                android:text="Lembrar-me"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/txtEsqSenha"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="27dp"-->
+            <!--                android:layout_marginTop="14dp"-->
+            <!--                android:text="@string/esqueci_minha_senha"-->
+            <!--                android:textAlignment="center"-->
+            <!--                android:textSize="13sp"-->
+            <!--                android:textColor="@android:color/white" />-->
+
+            <TextView
+                android:id="@+id/txtPolitica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Política de Privacidade"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:id="@+id/imgDownAtualizacao"
+                android:layout_width="46dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/download"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/btnAtualizarApp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/update"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/viewSnackBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="nome_aplicativo">Vachileski Coleta</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="erro_senha_invalida">Senha deve conter mais de 3 cacarteres</string>
+    <string name="erro_tamanho_string">Digite no mínimo 4 caracteres para buscar</string>
+    <string name="tamanho_3_invalido">Digite no mínimo 3 caracteres</string>
+    <string name="erro_campo_obrigatorio">Preenchimento obrigatório!</string>
+    <string name="erro_documento_invalido">Digite um documento válido!</string>
+    <string name="termo1"><b>A EXECUÇÃO DOS SERVIÇOS ESTÁ SUBORDINADA A APROVAÇÃO DA SITUAÇÃO CADASTRAL DO CLIENTE.</b>\n
+                            Autorizo a contratação do serviço de <b>REFORMA</b>, responsabilizando-me pelo pagamento do serviço
+                            que foi contratado pelo Borracheiro, ficando conferidos, por meio desta cláusula mandato, poderes para o
+                            faturamento (emissão de nota fiscal) do serviço de <b>REFORMA</b> dos pneus acima descriminados.</string>
+    <string name="termo2">A GARANTIA ABRANGE SOMENTE A REFORMA E NÃO A CARCAÇA.\n
+                         RESPONSABILIZAMO-NOS POR ESTA MERCADORIA ATÉ 30 DIAS APÓS APANHO.\n
+                         ESTOU AUTORIZANDO A <b>[NOME_EMPRESA]</b> A PRESTAR OS SERVIÇOS DE REFORMA NOS PNEUS ACIMA RELACIONADOS.</string>
+    <string name="termo3">O Valor Total da coleta poderá ser alterado se forem adicionados CONSERTOS e/ou itens forem RECUSADOS (quando serviços).</string>
+    <string name="tituloColeta">Apanhe de Pneus</string>
+    <string name="filiais">Filial:</string>
+    <string name="cpf_cnpj">CPF ou\nCNPJ:</string>
+    <string name="razao_social">Nome:</string>
+    <string name="inscr_estadual">Insc.Est.:</string>
+    <string name="e_mail">E-mail</string>
+    <string name="dados_entrega">Dados Entrega</string>
+    <string name="endereco_entrega">Endereço de Entrega</string>
+    <string name="bairro">Bairro</string>
+    <string name="municpio_entrega">Município Entrega</string>
+    <string name="cep">CEP</string>
+    <string name="dados_cobranca">Dados Cobrança</string>
+    <string name="endereco_cobranca">Endereço de Cobrança</string>
+    <string name="bairro_cobr">Bairro Cobr</string>
+    <string name="cep_cobranca">CEP Cobrança</string>
+    <string name="dialog_long_press_titulo">O que deseja fazer?</string>
+    <string name="mensagem_dialog_numero_celular"><b>Ex.: 54 9 9999 0000 (sem os espaços)</b></string>
+    <string name="mensagem_dialog_email"><b>Ex.: mail@mail.com.br</b></string>
+    <string name="confirma_comissao">Confirma Comissão</string>
+    <string name="comissao_de_borracheiro">Comissão de Borracheiro</string>
+    <string name="digite_a_porcentagem_ou_o_valor">Digite a PORCENTAGEM ou o VALOR</string>
+    <string name="percent_comissao">% Comissão</string>
+    <string name="valor_comissao">Valor Comissão</string>
+    <string name="caracteresPermitidos">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$%-+ (),.;:</string>
+</resources>

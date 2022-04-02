@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_paginas"
+    android:orientation="vertical"
+    app:autoSizeTextType="uniform"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTeste"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/red"
+            android:textColor="@color/branco"
+            android:text="SISTEMA EM HOMOLOGAÇÃO"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="170dp"
+            app:autoSizeTextType="uniform"
+            app:srcCompat="@drawable/logogrupo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:elevation="-16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Coleta Eletrônica"
+                android:textAlignment="center"
+                app:autoSizeTextType="uniform" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="5dp"
+                    app:autoSizeTextType="uniform">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/btnColeta"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/iniciarcoleta" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:text="Iniciar Coleta\nEletrônica"
+                            android:textAlignment="center"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="5dp"
+                    app:autoSizeTextType="uniform">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgViewColeStatus"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/buscacoletas" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:text="Busca de\nColetas"
+                            android:textAlignment="center"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="80dp"-->
+                <!--                    android:layout_height="90dp"-->
+                <!--                    android:layout_margin="5dp"-->
+                <!--                    android:id="@+id/cardViewColetasPendentes">-->
+
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:orientation="vertical">-->
+
+                <!--                        <ImageView-->
+                <!--                            android:id="@+id/btnColetasPendEnv"-->
+                <!--                            android:layout_width="50dp"-->
+                <!--                            android:layout_height="50dp"-->
+                <!--                            android:background="@drawable/circlebackgroundred"-->
+                <!--                            android:src="@drawable/ic_priority_high_black_24dp" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:id="@+id/txtColPendentesEnvio"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_margin="5dp"-->
+                <!--                            android:text="Pendentes de Envio"-->
+                <!--                            android:textAlignment="center"-->
+                <!--                            android:textSize="10sp" />-->
+                <!--                    </LinearLayout>-->
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <!--                <Button-->
+                <!--                    android:id="@+id/btnColetasPendentes"-->
+                <!--                    android:layout_width="30dp"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:background="@drawable/exclamation"-->
+                <!--                    android:layout_margin="5dp"-->
+                <!--                    android:layout_gravity="center"/>-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/llFrotas"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_margin="3dp"-->
+        <!--            android:elevation="-16dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:orientation="vertical">-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="5dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:paddingStart="5dp"-->
+        <!--                android:paddingEnd="5dp"-->
+        <!--                android:text="Frota" />-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:clipToPadding="false"-->
+        <!--                android:gravity="center"-->
+        <!--                android:orientation="horizontal">-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="80dp"-->
+        <!--                    android:layout_height="90dp"-->
+        <!--                    android:layout_margin="5dp">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical">-->
+
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="50dp"-->
+        <!--                            android:layout_height="50dp"-->
+        <!--                            android:src="@drawable/trucking" />-->
+
+        <!--                        <TextView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_marginTop="3dp"-->
+        <!--                            android:text="Veículos" />-->
+        <!--                    </LinearLayout>-->
+        <!--                </androidx.cardview.widget.CardView>-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="80dp"-->
+        <!--                    android:layout_height="90dp"-->
+        <!--                    android:layout_margin="5dp">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical">-->
+
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="50dp"-->
+        <!--                            android:layout_height="50dp"-->
+        <!--                            android:src="@drawable/notas" />-->
+
+        <!--                        <TextView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_marginTop="3dp"-->
+        <!--                            android:text="Notas Fiscais"-->
+        <!--                            android:textAlignment="center"-->
+        <!--                            android:textSize="12sp"/>-->
+        <!--                    </LinearLayout>-->
+        <!--                </androidx.cardview.widget.CardView>-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="80dp"-->
+        <!--                    android:layout_height="90dp"-->
+        <!--                    android:layout_margin="5dp">-->
+
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical">-->
+
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="50dp"-->
+        <!--                            android:layout_height="50dp"-->
+        <!--                            android:src="@drawable/gasstation" />-->
+
+        <!--                        <TextView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:layout_marginTop="3dp"-->
+        <!--                            android:text="Abastecimentos"-->
+        <!--                            android:textSize="10sp"/>-->
+        <!--                    </LinearLayout>-->
+        <!--                </androidx.cardview.widget.CardView>-->
+        <!--            </LinearLayout>-->
+        <!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/llAdministrador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:elevation="-16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Configurações e Ferramentas" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="80dp"-->
+                <!--                    android:layout_height="90dp"-->
+                <!--                    android:layout_margin="5dp"-->
+                <!--                    android:id="@+id/cardBuscaDados">-->
+
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:orientation="vertical">-->
+
+                <!--                        <ImageView-->
+                <!--                            android:id="@+id/btnBusca"-->
+                <!--                            android:layout_width="50dp"-->
+                <!--                            android:layout_height="50dp"-->
+                <!--                            android:src="@drawable/analytics" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="3dp"-->
+                <!--                            android:text="Dados"-->
+                <!--                            android:textAlignment="center"/>-->
+                <!--                    </LinearLayout>-->
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardConfiguracoes"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_margin="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/btnAdmin"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/definicoes" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:text="Opções"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSair"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/sair" />
+
+            <TextView
+                android:id="@+id/txtVersao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="VERSÃO"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/txtDetalhesVersao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="DETALHES DA VERSÃO"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+<!--            <Button-->
+<!--                android:id="@+id/btnTestes"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="teste"-->
+<!--                android:textStyle="bold" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imgView"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content" />-->
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewSnackBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/viewSnackBarConn"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+    </LinearLayout>
+</ScrollView>
