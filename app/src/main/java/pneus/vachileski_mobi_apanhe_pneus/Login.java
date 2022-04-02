@@ -493,7 +493,7 @@ public class Login extends AppCompatActivity {
         protected Boolean doInBackground(Boolean... params) {
             try {
                 /* VERIFICAÇÃO DE CONEXÃO COM BD */
-                if (conecta.ConnectToDatabase("A", GettersSetters.getConexaoBD()) != null) {
+                if (conecta.ConnectToDatabase("C", GettersSetters.getConexaoBD()) != null) {
                     /* * VALIDAÇÃO DE CONEXÃO **/
                     if (db.selectUsuariosVendedores("", "", false, true).getCount() == 0) {
                         if (isConnected) {

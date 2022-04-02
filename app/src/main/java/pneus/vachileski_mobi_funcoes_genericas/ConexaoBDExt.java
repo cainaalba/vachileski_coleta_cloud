@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
-import android.os.DropBoxManager;
 import android.os.StrictMode;
 import android.util.Log;
 
@@ -61,9 +60,7 @@ public class ConexaoBDExt {
     public String telefoneFilial = "";
     public String cepFilial = "";
 
-    String connectionUrlEmbratel = null;
-    String connectionUrlNetSV = null;
-    String connectionUrlInt = null;
+    String connectionUrlAws = null;
 
     public String codigoCliente = null;
     public String lojaCliente = null;
@@ -135,28 +132,8 @@ public class ConexaoBDExt {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
         StrictMode.setThreadPolicy(policy);
 
-        switch (fonteBD) {
-            case "A":
-                // Variável para conexão com banco de dados EXTERNO
-                connectionUrlEmbratel = DadosBD.driverConnSQLSrv + DadosBD.conectaBDExtEmbratelAG + DadosBD.paramSQLSrv + DadosBD.bdRecapador;
-                connectionUrlNetSV = DadosBD.driverConnSQLSrv + DadosBD.conectaBDExtNetSVAG + DadosBD.paramSQLSrv + DadosBD.bdRecapador;
-                // Variável para conexão com banco de dados INTERNO
-                connectionUrlInt = DadosBD.driverConnSQLSrv + DadosBD.conectaBDIntAg + DadosBD.paramSQLSrv + DadosBD.bdRecapador;
-                break;
-            case "C":
-                // Variável para conexão com banco de dados EXTERNO - Coleta
-                connectionUrlEmbratel = DadosBD.driverConnSQLSrv + DadosBD.conectaBDExtEmbratelAG + DadosBD.paramSQLSrv + DadosBD.bdColeta;
-                connectionUrlNetSV = DadosBD.driverConnSQLSrv + DadosBD.conectaBDExtNetSVAG + DadosBD.paramSQLSrv + DadosBD.bdColeta;
-                // Variável para conexão com banco de dados INTERNO - Coleta
-                connectionUrlInt = DadosBD.driverConnSQLSrv + DadosBD.conectaBDIntAg + DadosBD.paramSQLSrv + DadosBD.bdColeta;
-                break;
-            case "P":
-                // Variável para conexão com banco de dados EXTERNO
-                connectionUrlEmbratel = DadosBD.driverConnSQLSrv + DadosBD.conectaBDExtEmbratelPRD + DadosBD.paramSQLSrv + DadosBD.bdProducao;
-                connectionUrlNetSV = DadosBD.driverConnSQLSrv + DadosBD.conectaBDExtNetSVPRD + DadosBD.paramSQLSrv + DadosBD.bdProducao;
-                // Variável para conexão com banco de dados INTERNO
-                connectionUrlInt = DadosBD.driverConnSQLSrv + DadosBD.conectaBDIntPrd + DadosBD.paramSQLSrv + DadosBD.bdProducao;
-                break;
+        if ("C".equals(fonteBD)) {// Variável para conexão com banco de dados EXTERNO - Coleta
+            connectionUrlAws = DadosBD.driverConnSQLSrv + DadosBD.endpointColetaCloud + DadosBD.paramSQLSrv + DadosBD.bdColeta;
         }
 
         if (conexaoBD.equals("0")) {
@@ -164,75 +141,23 @@ public class ConexaoBDExt {
                 GettersSetters.setConexaoBD("3");
                 GettersSetters.setStringConexao("Interna");
                 DriverManager.setLoginTimeout(3);
-                connection = DriverManager.getConnection(connectionUrlInt);
+                connection = DriverManager.getConnection(connectionUrlAws);
             } catch (Exception e) {
                 GettersSetters.setErroEnvioColetaBDExt("Não foi possível conectar na base de dados. Feche o aplicativo e tente novamente.");
                 e.printStackTrace();
                 connection = null;
             }
-
-            /* * NETSV * **/
-            if (connection == null) {
-                try {
-                    GettersSetters.setConexaoBD("1");
-                    GettersSetters.setStringConexao("NetSV");
-                    DriverManager.setLoginTimeout(3);
-                    connection = DriverManager.getConnection(connectionUrlNetSV);
-                } catch (Exception e) {
-                    GettersSetters.setErroEnvioColetaBDExt("Não foi possível conectar na base de dados. Feche o aplicativo e tente novamente.");
-                    e.printStackTrace();
-                    connection = null;
-                }
-            }
-
-            /* * EMBRATEL * **/
-            if (connection == null) {
-                try {
-                    GettersSetters.setConexaoBD("2");
-                    GettersSetters.setStringConexao("Embratel");
-                    DriverManager.setLoginTimeout(3);
-                    connection = DriverManager.getConnection(connectionUrlEmbratel);
-                } catch (Exception e) {
-                    GettersSetters.setErroEnvioColetaBDExt("Não foi possível conectar na base de dados. Feche o aplicativo e tente novamente.");
-                    e.printStackTrace();
-                    connection = null;
-                }
-            }
         } else {
-            switch (conexaoBD) {
-                case "1":
-                    try { //conexão NetSV - Estabiliza a conexão
-                        connection = DriverManager.getConnection(connectionUrlNetSV);
-                    } catch (Exception e) {
-                        connectionUrlNetSV = null;
-                        preparedStatement = null;
-                        connection = null;
-                        GettersSetters.setConexaoBD("0");
-                        GettersSetters.setErroEnvioColetaBDExt("Não foi possível conectar na base de dados. Feche o aplicativo e tente novamente.");
-                    }
-                    break;
-                case "2":
-                    try { //conexão Embratel - Estabiliza a conexão
-                        connection = DriverManager.getConnection(connectionUrlEmbratel);
-                    } catch (Exception e) {
-                        connectionUrlEmbratel = null;
-                        preparedStatement = null;
-                        connection = null;
-                        GettersSetters.setConexaoBD("0");
-                        GettersSetters.setErroEnvioColetaBDExt("Não foi possível conectar na base de dados. Feche o aplicativo e tente novamente.");
-                    }
-                    break;
-                case "3":
-                    try { //conexão Interna - Estabiliza a conexão
-                        connection = DriverManager.getConnection(connectionUrlInt);
-                    } catch (Exception e) {
-                        connectionUrlInt = null;
-                        preparedStatement = null;
-                        connection = null;
-                        GettersSetters.setConexaoBD("0");
-                        GettersSetters.setErroEnvioColetaBDExt("Não foi possível conectar na base de dados. Feche o aplicativo e tente novamente.");
-                    }
-                    break;
+            if ("3".equals(conexaoBD)) {
+                try { //conexão Interna - Estabiliza a conexão
+                    connection = DriverManager.getConnection(connectionUrlAws);
+                } catch (Exception e) {
+                    connectionUrlAws = null;
+                    preparedStatement = null;
+                    connection = null;
+                    GettersSetters.setConexaoBD("0");
+                    GettersSetters.setErroEnvioColetaBDExt("Não foi possível conectar na base de dados. Feche o aplicativo e tente novamente.");
+                }
             }
         }
         return connection;
